@@ -1,0 +1,14 @@
+services:
+  container:
+    build: ./container
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./container:/app
+
+  bff:
+    build: ./bff
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./bff:/app

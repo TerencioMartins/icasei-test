@@ -1,0 +1,31 @@
+{
+  "name": "bff",
+  "version": "1.0.0",
+  "scripts": {
+    "teste": "ts-node-dev --respawn -- ./temp.ts",
+    "start": "node dist/server.js",
+    "start:dev": "ts-node-dev --respawn -- ./server.ts",
+    "build": "tsc -p tsconfig.json",
+    "eslint": "eslint"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "*",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/axios": "*",
+    "@types/cors": "*",
+    "@types/express": "*",
+    "@types/node": "*",
+    "jest": "*",
+    "ts-node": "*",
+    "ts-node-dev": "*",
+    "typescript": "*"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
