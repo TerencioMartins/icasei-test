@@ -1,0 +1,104 @@
+:host(mf_videos) {
+  display: flex;
+  flex-direction: column;
+}
+
+:host(mf_videos) .input-container {
+  position: relative;
+  align-items: center;
+}
+
+:host(mf_videos) h2 {
+  font-size: 2rem / 1.4;
+  color: rgb(117, 117, 117);
+  font-weight: 400;
+}
+
+:host(mf_videos) #mf_videos__search {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+}
+
+:host(mf_videos) label {
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 400;
+  left: 12px;
+  top: 50%;
+  color: rgb(158, 158, 158);
+  padding-left: 6px;
+  padding-right: 6px;
+  transform: translateY(-50%);
+  transition: all 0.15s linear 0s;
+  background-color: white;
+}
+
+:host(mf_videos) .input-box {
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 4px;
+  outline: none;
+  padding: 16px;
+  font-size: 1.4rem;
+  width: 100%;
+  color: rgb(117, 117, 117);
+}
+
+:host(mf_videos) .input-box:focus {
+  border: 1px solid rgb(117, 117, 117);
+}
+
+:host(mf_videos) .input-box:focus + label {
+  transform: translateY(-220%);
+  font-size: 12px;
+}
+
+:host(mf_videos) #mf_videos__search-icon {
+  position: absolute;
+  right: 12px;
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  cursor: pointer;
+  fill: rgb(144, 202, 249);
+}
+
+:host(mf_videos) #mf_videos__search-icon.disabled {
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+:host(mf_videos) #mf_videos__search-icon:hover {
+  fill: rgb(100, 181, 246);
+}
+
+:host(mf_videos) #mf_videos__search-results {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+:host(mf_videos) .mf_videos__video-container {
+  position: relative;
+  border: 1px solid rgb(224, 224, 224);
+  aspect-ratio: 3/2;
+  border-radius: 4px;
+}
+
+:host(mf_videos) .mf_videos__favorite-icon {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  cursor: pointer;
+}
+
+:host(mf_videos) .mf_videos__favorite-icon .fill {
+  visibility: hidden;
+}
+
+:host(mf_videos) .mf_videos__favorite-icon:hover .fill,
+:host(mf_videos) .mf_videos__favorite-icon.favorite .fill {
+  visibility: visible;
+}
