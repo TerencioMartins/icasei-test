@@ -87,8 +87,8 @@ class MFVideos extends HTMLElement {
 
     const videoPlayer = document.createElement("iframe");
     videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
-    videoPlayer.width = "400";
-    videoPlayer.height = "225";
+    videoPlayer.width = "368";
+    videoPlayer.height = "207";
     videoPlayer.allowFullscreen = true;
     videoItem.appendChild(videoPlayer);
   }
