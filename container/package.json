@@ -4,21 +4,39 @@
   "main": "index.js",
   "scripts": {
     "teste": "ts-node-dev --respawn -- ./temp.ts",
-    "start": "http-server -p 8080 src",
+    "start": "http-server -p 8080 dist",
     "start:dev": "ts-node-dev --respawn -- ./app.ts",
-    "build": "tsc",
-    "eslint": "eslint"
+    "build": "tsc && cp src/mf_videos.html dist/mf_videos/mf_videos.html && cp src/mf_favorites.html dist/mf_videos/mf_favorites.html && cp src/index.html dist/index.html && copyfiles -u 1 src/**/*.css dist",
+    "eslint": "eslint",
+    "test": "jest --config ./jest.config.js"
   },
   "keywords": [],
   "author": "Terencio Martins",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
   "devDependencies": {
-    "ts-node-dev": "*",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@testing-library/dom": "^10.3.0",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@types/express": "*",
+    "@types/jest": "^29.5.12",
     "@types/node": "^16.11.7",
+    "@webcomponents/webcomponentsjs": "^2.8.0",
+    "babel-jest": "^29.7.0",
+    "copyfiles": "^2.4.1",
     "http-server": "^14.0.0",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
     "live-server": "^1.2.2",
+    "ts-jest": "^29.1.5",
+    "ts-node-dev": "*",
     "typescript": "^4.5.5"
   }
 }

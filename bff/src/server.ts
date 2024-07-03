@@ -32,6 +32,10 @@ app.get("/search", async (req: Request, res: Response) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`BFF listening at http://localhost:${port}`);
-});
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`BFF listening at http://localhost:${port}`);
+  });
+}
+
+export default app;
