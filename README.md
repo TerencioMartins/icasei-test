@@ -19,47 +19,11 @@ Siga estas etapas para configurar o projeto em sua máquina local.
    git clone https://github.com/TerencioMartins/icasei-test.git
    cd icasei-test
    ```
-2. Instale as dependências do projeto.
-   Execute os seguintes comandos na raiz do projeto para instalar as dependências necessárias para o backend e o frontend.
-   Para o backend (BFF):
-
-```
-cd bff
-npm install
-cd ..
-```
-
-Para o frontend (container):
-
-```
-cd container
-npm install
-cd ..
-```
-
-# Compilando o Projeto
-
-Para compilar o projeto, você precisa compilar tanto o backend quanto o frontend. Siga estas etapas:
-
-1. Compilar o backend:
-
-```
-cd bff
-npm run build
-cd ..
-```
-
-2. Compilar o frontend:
-
-```
-cd container
-npm run build
-cd ..
-```
 
 # Executando o Projeto
 
-Após compilar o projeto, você pode executá-lo usando Docker Compose.
+Após clonar o projeto, você pode executá-lo usando Docker Compose.
+Ps. Lembre-se de estar com o docker aberto na sua máquina.
 
 1. Na raiz do projeto, execute o seguinte comando para iniciar todos os serviços definidos no docker-compose.yml:
 
@@ -77,14 +41,18 @@ Para executar os testes, você precisa executar os testes tanto para o backend q
 
 ```
 cd bff
+npm install
 npm test
+cd ..
 ```
 
 2. Testes do frontend:
 
 ```
 cd container
+npm install
 npm test
+cd ..
 ```
 
 Siga estas instruções para compilar, testar e executar o projeto. Se você encontrar algum problema, verifique se todos os requisitos estão instalados corretamente e se os comandos foram executados na raiz correta do projeto.

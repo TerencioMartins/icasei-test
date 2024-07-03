@@ -1,11 +1,11 @@
 FROM node:14-alpine
 
-WORKDIR /app
+WORKDIR /container
 
-COPY package*.json ./
+COPY package*.json .
 RUN npm install
 
-COPY . ./
+COPY . .
 
 RUN npm run build
 

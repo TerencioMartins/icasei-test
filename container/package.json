@@ -6,7 +6,7 @@
     "teste": "ts-node-dev --respawn -- ./temp.ts",
     "start": "http-server -p 8080 dist",
     "start:dev": "ts-node-dev --respawn -- ./app.ts",
-    "build": "tsc && cp src/mf_videos.html dist/mf_videos/mf_videos.html && cp src/mf_favorites.html dist/mf_videos/mf_favorites.html && cp src/index.html dist/index.html && copyfiles -u 1 src/**/*.css dist",
+    "build": "tsc && cp src/mf_videos.html dist/mf_videos/mf_videos.html && cp src/mf_favorites.html dist/mf_videos/mf_favorites.html && cp src/index.html dist/index.html && copyfiles -u 1 src/**/*.css src/*.css dist",
     "eslint": "eslint",
     "test": "jest --config ./jest.config.js"
   },
